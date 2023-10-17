@@ -1,27 +1,17 @@
-#app{
-    position: relative;
-
-    min-height: 100vh;
-}
-
 #app .home_container{
     background-image: url(https://blog.geografia.deascuola.it/uploads/2023/04/Val-d-Orcia-panorama.jpg);
     background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     margin-top: 60px;
-    min-height: calc(100vh - 60px);
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .home_container .jumbotron{
-    background-color: rgba(0, 0, 0, 0.689);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.689);
+    color: #296a4f;
     margin-left: 30px;
     margin-right: 30px;
 }
