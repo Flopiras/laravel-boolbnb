@@ -6,4 +6,4 @@
 -   `composer install`
 -   `php artisan key:generate`
 -   `php artisan migrate --seed` per riempire il database
--   `php arisan serve`, NON fare npm run dev
+-   `php arisan serve`
