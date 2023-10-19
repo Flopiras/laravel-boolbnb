@@ -53,7 +53,7 @@
             </li>
             @auth
               <li class="nav-item mx-2">
-                <a class="@if (Route::is('admin.apartments.index')) is-active @endif nav-link position-relative"
+                <a class="@if (Route::is('admin.apartments*')) is-active @endif nav-link position-relative"
                   href="{{ route('admin.apartments.index') }}">I miei appartamenti
                 </a>
               </li>
