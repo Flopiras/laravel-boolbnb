@@ -1,6 +1,6 @@
 # STEPS INSTALLAZIONE
 
--   Da terminale scrivere `git clone https://github.com/carloeusebi/laravel-boolbnb`
+-   Da terminale scrivere `git clone https://github.com/Flopiras/laravel-boolbnb`
 -   `cp .env.example .env`
 -   nel file `.env` scrivere i dati del proprio database locale
 -   `composer install`
