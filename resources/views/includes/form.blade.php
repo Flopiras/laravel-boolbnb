@@ -18,16 +18,16 @@
 {{-- token --}}
 @csrf
 
-<p class="mb-4 text-end">
+<p class="mb-4 text-end main-color">
   * I campi sono obbligatori
 </p>
 
 <div class="row">
   {{-- name --}}
   <div class="mb-3 col-sm-12 col-lg-6">
-    <label for="name" class="form-label">Titolo inserzione *</label>
-    <input type="text" class="form-control  @error('name') is-invalid @enderror" name="name" id="name"
-      value="{{ old('name', $apartment->name) }}" placeholder="Inserire il titolo dell'inserzione">
+    <label for="name" class="form-label second-color">Titolo inserzione *</label>
+    <input type="text" class="form-control main-color @error('name') is-invalid @enderror" name="name"
+      id="name" value="{{ old('name', $apartment->name) }}" placeholder="Inserire il titolo dell'inserzione">
 
     {{-- error message --}}
     <div id="nameFeedback" class="invalid-feedback">
@@ -39,9 +39,9 @@
 
   {{-- address --}}
   <div class="mb-3 col-sm-12 col-lg-6">
-    <label for="address" class="form-label">Indirizzo *</label>
-    <input type="text" class="form-control  @error('address') is-invalid @enderror" name="address" id="address"
-      value="{{ old('address', $apartment->address) }}" placeholder="Inserisci qui l'indirizzo"
+    <label for="address" class="form-label second-color">Indirizzo *</label>
+    <input type="text" class="form-control main-color @error('address') is-invalid @enderror" name="address"
+      id="address" value="{{ old('address', $apartment->address) }}" placeholder="Inserisci qui l'indirizzo"
       list="suggested-addresses">
 
     {{-- error message --}}
@@ -56,9 +56,9 @@
 
   {{-- rooms --}}
   <div class="mb-3 col-sm-12 col-lg-3">
-    <label for="rooms" class="form-label">Numero stanze *</label>
+    <label for="rooms" class="form-label second-color">Numero stanze *</label>
     <input type="number" min="1" max="100" step="1"
-      class="form-control  @error('rooms') is-invalid @enderror" name="rooms" id="rooms"
+      class="form-control main-color @error('rooms') is-invalid @enderror" name="rooms" id="rooms"
       value="{{ old('rooms', $apartment->rooms) }}">
 
     {{-- error message --}}
@@ -71,9 +71,9 @@
 
   {{-- bedrooms --}}
   <div class="mb-3 col-sm-12 col-lg-3">
-    <label for="bedrooms" class="form-label">Numero camere da letto *</label>
+    <label for="bedrooms" class="form-label second-color">Numero camere da letto *</label>
     <input type="number" min="1" max="100" step="1"
-      class="form-control  @error('bedrooms') is-invalid @enderror" name="bedrooms" id="bedrooms"
+      class="form-control main-color @error('bedrooms') is-invalid @enderror" name="bedrooms" id="bedrooms"
       value="{{ old('bedrooms', $apartment->bedrooms) }}">
 
     {{-- error message --}}
@@ -86,9 +86,9 @@
 
   {{-- bathrooms --}}
   <div class="mb-3 col-sm-12 col-lg-3">
-    <label for="bathrooms" class="form-label">Numero bagni *</label>
+    <label for="bathrooms" class="form-label second-color">Numero bagni *</label>
     <input type="number" min="1" max="100" step="1"
-      class="form-control  @error('bathrooms') is-invalid @enderror" name="bathrooms" id="bathrooms"
+      class="form-control main-color @error('bathrooms') is-invalid @enderror" name="bathrooms" id="bathrooms"
       value="{{ old('bathrooms', $apartment->bathrooms) }}">
 
     {{-- error message --}}
@@ -101,10 +101,10 @@
 
   {{-- square_meters --}}
   <div class="mb-3 col-sm-12 col-lg-3">
-    <label for="square_meters" class="form-label">Metri quadri *</label>
+    <label for="square_meters" class="form-label second-color">Metri quadri *</label>
     <input type="number" min="1" max="999" step="0.5"
-      class="form-control  @error('square_meters') is-invalid @enderror" name="square_meters" id="square_meters"
-      value="{{ old('square_meters', $apartment->square_meters) }}">
+      class="form-control main-color @error('square_meters') is-invalid @enderror" name="square_meters"
+      id="square_meters" value="{{ old('square_meters', $apartment->square_meters) }}">
 
     {{-- error message --}}
     <div id="square_metersFeedback" class="invalid-feedback">
@@ -116,8 +116,8 @@
 
   {{-- description --}}
   <div class="mb-3 col-12">
-    <label for="description" class="form-label">Descrizione *</label>
-    <textarea class="form-control  @error('description') is-invalid @enderror" name="description" id="description"
+    <label for="description" class="form-label second-color">Descrizione *</label>
+    <textarea class="form-control main-color @error('description') is-invalid @enderror" name="description" id="description"
       rows="5">{{ old('description', $apartment->description) }}</textarea>
 
     {{-- error message --}}
@@ -135,8 +135,9 @@
         <input class="form-check-input" type="checkbox" @if (in_array($service->id, old('services', $apartment_service_ids ?? []))) checked @endif
           id="tech-{{ $service->id }}" value="{{ $service->id }}" name="services[]">
         <label class="form-check-label" for="tech-{{ $service->id }}"><i
-            class="fa-solid fa-{{ $service->icon }} me-1"></i>
-          {{ $service->name }}</label>
+            class="fa-solid fa-{{ $service->icon }} main-color me-1"></i>
+          <span class="main-color">{{ $service->name }}</span>
+        </label>
       </div>
 
       {{-- error message --}}
@@ -151,8 +152,8 @@
   {{-- thumbnail --}}
   <div class="col-sm-12 col-lg-7">
     <div class="mb-3">
-      <label for="thumbnail" class="form-label">Immagine</label>
-      <input class="form-control @error('thumbnail') is-invalid @enderror" type="file" id="thumbnail"
+      <label for="thumbnail" class="form-label second-color">Immagine</label>
+      <input class="form-control main-color @error('thumbnail') is-invalid @enderror" type="file" id="thumbnail"
         name="thumbnail">
       {{-- error message --}}
       <div id="thumbnailFeedback" class="invalid-feedback">
@@ -174,7 +175,7 @@
 
 {{-- submit --}}
 <div class="d-flex justify-content-end mt-4">
-  <button class="btn btn-success">Salva</button>
+  <button class="btn btn-second fw-semibold">Salva</button>
 </div>
 
 </form>
