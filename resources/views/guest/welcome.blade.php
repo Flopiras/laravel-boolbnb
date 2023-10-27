@@ -14,7 +14,7 @@
           esistenti e
           avere accesso ai messaggi scritti dai visitatori dei tuoi annunci</p>
         @if (!Auth::user())
-          <a href="{{ url('/login') }}" class="btn btn-primary btn-lg" type="button">Accedi</a>
+          <a href="{{ url('/login') }}" class="btn btn-second fw-semibold btn-lg" type="button">Accedi</a>
         @endif
       </div>
     </div>
